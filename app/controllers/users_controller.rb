@@ -41,7 +41,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    debugger
     params.require(:user).permit(:name, :email, campaigns_list: [:campaign_name, :campaign_id])
   end
 end
